@@ -13,10 +13,8 @@ class Grafico:
         if tipo_grafico == "dispersion":
             ax.scatter(self.dt[col1], self.dt[col2])
         else:
-            self.dt.groupby(col1)[col2].plot(kind = tipo_grafico, ax = ax)
-        ax.set_title('Grafico ' + tipo_grafico, loc = "center", fontdict = {'fontsize':14, 'fontweight':'bold', 'color':'tab:blue'})
+            self.dt.groupby(col1)[col2].sum().plot(kind = tipo_grafico, ax = ax)
+        ax.set_title('Grafico ' + tipo_grafico, loc = "center", fontdict = {'fontsize':14, 
+        'fontweight':'bold', 'color':'tab:blue'})
         ax.set_ylabel('')
-        plt.savefig('Graficos/grafico' + ' - '.join(tipo_grafico) + '.png', bbox_inches='tight')
-
-grafica = Grafico("Dataset housing/USA_Housing.csv")
-grafica.grafico("bar","Area Population","Price")
+        plt.savefig('Graficos/grafico' + ' - '+ tipo_grafico + '.png', bbox_inches='tight')
