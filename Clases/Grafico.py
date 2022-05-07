@@ -17,4 +17,4 @@ class Grafico:
         ax.set_title('Grafico ' + tipo_grafico, loc = "center", fontdict = {'fontsize':14, 
         'fontweight':'bold', 'color':'tab:blue'})
         ax.set_ylabel('')
-        plt.savefig('Graficos/grafico' + ' - '+ tipo_grafico + '.png', bbox_inches='tight')
+        plt.savefig('Graficos/grafico' + ' - '+ tipo_grafico + col1 + col2 + '.png', bbox_inches='tight')
