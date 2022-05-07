@@ -9,3 +9,5 @@ if __name__ == "__main__":
     grafica.grafico("dispersion","Avg. Area Income","Avg. Area Number of Rooms")
     #A continuacion vamos a comparar el ingreso medio con el precio de la vivienda adquirida
     grafica.grafico("dispersion","Avg. Area Income","Price")
+    #Aanalizamos el numero de dormitorios con el numero de habitaciones que tiene la vivienda
+    grafica.grafico("hist","Avg. Area Number of Rooms","Avg. Area Number of Bedrooms")
