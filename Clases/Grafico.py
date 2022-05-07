@@ -1,5 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt 
+from matplotlib import pyplot
 import numpy as np
 
 class Grafico:
@@ -15,9 +16,12 @@ class Grafico:
             correlacion = round(correl[0][1], 3)
             return correlacion
     
+        def f(x):
+            return pearson()*x
+
         print("Generando Grafico...")
         print("El coeficiente de correlacion de Pearson es {}".format(pearson()))
-        
+
         fig, ax = plt.subplots()
         if tipo_grafico == "dispersion":
             ax.scatter(self.dt[col1], self.dt[col2])
