@@ -16,9 +16,6 @@ class Grafico:
             correlacion = round(correl[0][1], 3)
             return correlacion
     
-        def f(x):
-            return pearson()*x
-
         print("Generando Grafico...")
         print("El coeficiente de correlacion de Pearson es {}".format(pearson()))
 
