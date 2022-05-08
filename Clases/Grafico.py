@@ -1,6 +1,5 @@
 import pandas as pd
-import matplotlib.pyplot as plt 
-from matplotlib import pyplot
+import matplotlib.pyplot as plt
 import numpy as np
 
 class Grafico:
@@ -21,7 +20,7 @@ class Grafico:
 
         fig, ax = plt.subplots()
         if tipo_grafico == "dispersion":
-            ax.scatter(self.dt[col1], self.dt[col2])
+            plt.scatter(self.dt[col1], self.dt[col2])
         else:
             self.dt.groupby(col1)[col2].sum().plot(kind = tipo_grafico, ax = ax)
         ax.set_title('Grafico ' + tipo_grafico, loc = "center", fontdict = {'fontsize':14, 
